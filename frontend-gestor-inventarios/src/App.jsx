@@ -5,8 +5,7 @@ import { Rutas } from './routing/Rutas';
 function App() {
 
   return (
-    <div className='App'>
-      <h1>Gestor de Inventarios La Vitrola Música Creativa</h1>
+    <div className='layout'>
       
       <Rutas/>
 

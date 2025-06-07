@@ -1,0 +1,29 @@
+:root {
+    --color-primario: #262e35;
+    --color-secundario: #ffffff;
+    --color-terciario: #FF4B2B;
+    --color-hover: #888d49;
+
+
+    --fuente-poppins: "Poppins", sans-serif;
+
+    --tamano-titulo: 0.8rem;
+    --tamano-parrafo: .3rem;
+    --tamano-button: .5rem
+}
+
+.header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+img {
+    width: 90px;
+    margin-right: 20px;
+}
+.header-title {
+    color: var(--color-terciario);
+}
