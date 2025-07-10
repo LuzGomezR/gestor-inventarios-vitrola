@@ -1,23 +1,23 @@
-import React from 'react'
+import React from 'react';
+import './Header.css';
 
 export const Header = () => {
+
   return (
-    
-     <header className="header">
+    <header className="header">
+      <div className="logo-container">
+        <img
+          src="src/img/logonuevo.png" // Asegúrate de tener el logo en `public/logo.png` o cambia la ruta
+          alt="Logo Empresa"
+          className="logo"
+        />
+        <span className="app-name">Gestor de Inventarios</span>
+      </div>
 
-        <div className="header-logo">
-          <img src="/src/img/logonuevo.png" alt="Logo la Vitrola Música Creativa" />
-        </div>
-        <div className='header-title'>
-          <h1>Gestor de Inventarios</h1>
-          <h2>La Vitrola Música Creativa</h2>
-        </div>
-        <div className='header-title'>
-          <h4>Usuario: Danilo Casallas</h4>
-        </div>
-      
-
-             
+      <div className="user-info">
+        <span>👤 Danilo Casllas </span>
+        <span className="role">Role</span>
+      </div>
     </header>
-  )
-}
+  );
+};

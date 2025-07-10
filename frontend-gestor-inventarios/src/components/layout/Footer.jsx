@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
 
 export const Footer = () => {
   return (
-    <div className='footer'>
-      <p> &#169; Copyright Gestor de Inventario de La Vitrola Música Creativa - 2025</p>
-    </div>
-  )
-}
+    <footer className="footer">
+      <p>© {new Date().getFullYear()} La Vitrola Música Creativa</p>
+    </footer>
+  );
+};
