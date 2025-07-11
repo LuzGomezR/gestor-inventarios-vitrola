@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /*HEEADER*/
@@ -41,6 +43,84 @@
 }
 
 /*MAIN*/
+
+/*LOGIN*/
+#page-content-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262e35;
+  background-image: url(/src/img/instruments-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-login {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  width: 100%;
+}
+.title-login {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-box .input-login {
+  padding: 12px 40px 12px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+.input-box .icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+}
+.forgot-password {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-password .btn-forgot {
+  color: #262e35;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.forgot-password .btn-forgot:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #262e35;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #888d49;
+}
+
 /*HOME*/
 
 .card-grid {
@@ -48,6 +128,7 @@
   grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
   gap: 2rem;
   width: 100%;
+  margin: 2rem;
 }
 .links {
   text-decoration: none;
@@ -64,7 +145,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 5rem;
+  height: 7rem;
 }
 .card:hover {
   transform: translateY(-5px);
@@ -76,7 +157,7 @@
 }
 
 /*USERS*/
-.form-usuario {
+.form-agregar {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -85,7 +166,7 @@
   width: 100%;
   max-width: 600px;
 }
-.input-user {
+.input-info {
   flex: 1 1 100%;
   padding: 0.6rem;
   font-size: 1rem;
@@ -93,7 +174,7 @@
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-#button-user {
+#button-enviar {
   background-color: #3498db;
   color: white;
   border: none;
@@ -102,20 +183,19 @@
 .tabla-wrapper {
   width: 100%;
 }
-.tabla-usuarios {
+.tabla-datos {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
-.tabla-usuarios th,
-.tabla-usuarios td {
+.tabla-datos th,
+.tabla-datos td {
   border: 1px solid #ddd;
   padding: 0.8rem;
 }
-.tabla-usuarios th {
+.tabla-datos th {
   background-color: #f0f0f0;
 }
-
 
 /*MODULS ALL*/
 .page-content {

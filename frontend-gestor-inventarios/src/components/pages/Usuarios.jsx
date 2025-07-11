@@ -3,12 +3,13 @@ import { NavLink } from "react-router-dom";
 
 export const Usuarios = () => {
   const [usuarios, setUsuarios] = useState([
-    { id: 1, nombre: "Admin", rol: "Administadror", correo: "admin@correo.com" },
-    { id: 2, nombre: "Auxiliar 1", rol: "Auxiliar", correo: "aux1@correo.com" },
+    {},
   ]);
 
   const [nuevoUsuario, setNuevoUsuario] = useState({
+    identificacion: "",
     nombre: "",
+    apellido: "",
     correo: "",
     rol: "auxiliar",
   });
@@ -22,7 +23,7 @@ export const Usuarios = () => {
     e.preventDefault();
     const nuevo = { ...nuevoUsuario, id: usuarios.length + 1 };
     setUsuarios([...usuarios, nuevo]);
-    setNuevoUsuario({ nombre: "", correo: "", rol: "auxiliar" });
+    setNuevoUsuario({ identificacion: "", nombre: "", apellido: "", correo: "", rol: "" });
   };
 
   return (
@@ -35,7 +36,7 @@ export const Usuarios = () => {
         <h2>Usuarios</h2>
       </div>
 
-      <form onSubmit={agregarUsuario} className="form-usuario">
+      <form onSubmit={agregarUsuario} className="form-agregar">
         <input
           type="number"
           name="identificacion"
@@ -43,16 +44,25 @@ export const Usuarios = () => {
           onChange={handleChange}
           placeholder="Identificación "
           required
-          className="input-user"
+          className="input-info"
         />
         <input
           type="text"
           name="nombre"
           value={nuevoUsuario.nombre}
           onChange={handleChange}
-          placeholder="Nombre"
+          placeholder="Nombres"
           required
-          className="input-user"
+          className="input-info"
+        />
+        <input
+          type="text"
+          name="apellido"
+          value={nuevoUsuario.apellido}
+          onChange={handleChange}
+          placeholder="Apellidos"
+          required
+          className="input-info"
         />
         <input
           type="email"
@@ -61,22 +71,23 @@ export const Usuarios = () => {
           onChange={handleChange}
           placeholder="Correo"
           required
-          className="input-user"
+          className="input-info"
         />
-        <select name="rol" value={nuevoUsuario.rol} onChange={handleChange} className="input-user">
-          <option value="admin">Administrador</option>
+        <select name="rol" value={nuevoUsuario.rol} onChange={handleChange} className="input-info">
+          <option value="administrador">Administrador</option>
           <option value="auxiliar">Auxiliar</option>
         </select>
-        <button type="submit" className="input-user" id="button-user"> Agregar Usuario</button>
+        <button type="submit" className="input-info" id="button-enviar"> Agregar Usuario</button>
       </form>
 
       <div className="tabla-wrapper">
-        <table className="tabla-usuarios">
+        <table className="tabla-datos">
           <thead>
             <tr>
-              <th>#</th>
+              <th>N°</th>
               <th>Identificación</th>
-              <th>Nombre</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
               <th>Correo</th>
               <th>Rol</th>
             </tr>
@@ -87,6 +98,7 @@ export const Usuarios = () => {
                 <td>{usuario.id}</td>
                 <td>{usuario.identificacion}</td>
                 <td>{usuario.nombre}</td>
+                <td>{usuario.apellido}</td>
                 <td>{usuario.correo}</td>
                 <td>{usuario.rol}</td>
               </tr>

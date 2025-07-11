@@ -12,7 +12,7 @@ export const Home = () => {
       {/*{isLoggedIn && <Header />}*/}
 
       <div className="title-container">
-        <h1>Bienvenido</h1>
+        <h2>Bienvenido</h2>
       </div>
       
       <div className="card-grid">
