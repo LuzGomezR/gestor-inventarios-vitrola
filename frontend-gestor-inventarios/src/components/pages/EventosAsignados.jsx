@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export const EventosPasados = () => {
+export const EventosAsignados = () => {
   return (
     <main className="page-content">
       <div className="div-back">
@@ -11,7 +11,7 @@ export const EventosPasados = () => {
       </div>
 
       <div className="title-container">
-        <h2>Eventos Pasados</h2>
+        <h2>Eventos Asigandos</h2>
       </div>
     </main>
   );

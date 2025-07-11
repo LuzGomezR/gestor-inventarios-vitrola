@@ -11,6 +11,20 @@
   text-align: center;
   margin-bottom: 1.5rem;
 }
+.div-back {
+  width: 100%;
+}
+.div-back a {
+  padding: 12px;
+  background-color: #262e35;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .form-usuario {
   display: flex;

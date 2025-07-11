@@ -7,12 +7,12 @@ export const Login = () => {
     
     <div className='loginForm'>
       <form action="">
-        <h1>Login</h1>
+
+        <h1>LOGIN</h1>
 
         <div className='input-box'>
           <input type="text" id='input-name' placeholder='Usuario' required />
           <FaUser className='icon'/>
-
         </div>
 
         <div className='input-box'>
@@ -25,11 +25,7 @@ export const Login = () => {
         </div>
 
         <button type='submit'>Ingresar</button>
-        {/*
-        <div className='link-register'>
-          <p>¿Aún no tienes cuenta?<a href="#">Registrate</a></p>
-        </div>
-        */}
+
 
       </form>
     </div>
